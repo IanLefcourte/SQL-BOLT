@@ -1,17 +1,28 @@
 -- CH1 - Select Queries 101
 
--- Exercise 1 — Tasks
-Find the title of each film
-Find the director of each film
-Find the title and director of each film
-Find the title and year of each film
-Find all the information about each film
-SELECT title
-FROM movie
-WHERE director = "Steven Spielberg";
+-- Find the title of each film
+SELECT Title
+FROM Movies;
 
--- Q2 Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.
-SELECT distinct year
-FROM movie, rating using(mid)
-WHERE rating.stars > 3
-ORDER BY year asc;
+-- Find the director of each film
+SELECT Director
+FROM Movies;
+
+-- Find the title and director of each film
+SELECT Title, Director
+FROM Movies;
+
+-- Find the title and year of each film
+SELECT Title, Director
+FROM Movies;
+
+-- Find all the information about each film
+SELECT *
+FROM movies;
+
+-- CH2 - Queries with constraints (Pt. 1)
+
+-- Find the movie with a row id of 6
+-- Find the movies released in the years between 2000 and 2010
+-- Find the movies not released in the years between 2000 and 2010
+-- Find the first 5 Pixar movies and their release  year
