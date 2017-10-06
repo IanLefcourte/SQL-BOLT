@@ -64,7 +64,7 @@ SELECT *
 FROM Movies
 WHERE Title LIKE "%WALL%";
 
--- CH3 - Queries with constraints (Pt. 2)
+-- CH4 - Filtering and sorting Query results
 
 -- List all directors of Pixar movies (alphabetically), without duplicates
 SELECT DISTINCT Director
@@ -89,3 +89,6 @@ FROM Movies
 ORDER BY Title ASC
 LIMIT 5
 OFFSET 5;
+
+-- CH5 - xxx
+
