@@ -124,7 +124,7 @@ ORDER BY Population DESC
 LIMIT 2
 OFFSET 2;
 
--- CH6 - Review Simple SELECT Queries
+-- CH7 - Multi-table queries with JOINs
 
 -- Find the domestic and international sales for each movie
 SELECT Title, International_sales, Domestic_sales
