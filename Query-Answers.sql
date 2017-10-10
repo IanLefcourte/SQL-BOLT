@@ -159,3 +159,19 @@ FROM Buildings;
 SELECT DISTINCT Building_name, Role 
 FROM Buildings 
 LEFT JOIN employees ON building_name = building;
+
+-- CH8 -  A short note on NULLs
+
+-- Find the name and role of all employees who have not been assigned to a building
+SELECT *
+FROM Employees
+LEFT JOIN Buildings
+ON Building_name = Building
+WHERE Building IS NULL;
+
+-- Find the names of the buildings that hold no employees
+SELECT *
+FROM Buildings
+LEFT JOIN Employees
+ON Building_name = Building
+WHERE Building IS NULL;
