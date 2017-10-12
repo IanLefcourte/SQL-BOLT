@@ -160,7 +160,7 @@ SELECT DISTINCT Building_name, Role
 FROM Buildings 
 LEFT JOIN employees ON building_name = building;
 
--- CH8 -  A short note on NULLs
+-- CH8 - A short note on NULLs
 
 -- Find the name and role of all employees who have not been assigned to a building
 SELECT *
@@ -175,3 +175,24 @@ FROM Buildings
 LEFT JOIN Employees
 ON Building_name = Building
 WHERE Building IS NULL;
+
+-- CH9 - Queries with expressions
+
+-- List all movies and their combined sales in millions of dollars
+SELECT Title, (Domestic_sales + International_sales)/1000000 AS Total_Sales_Millions
+FROM Movies
+LEFT JOIN Boxoffice ON Id=Movie_Id;
+
+-- List all movies and their ratings in percent
+SELECT Title, Rating*10 as Percent
+FROM Movies
+LEFT JOIN Boxoffice ON Id=Movie_Id;
+
+-- List all movies that were released on even number years
+SELECT Title, Year
+FROM Movies
+LEFT JOIN Boxoffice ON Id=Movie_Id
+WHERE Year % 2 = 0;
+
+
+
