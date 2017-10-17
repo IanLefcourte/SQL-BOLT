@@ -228,4 +228,16 @@ FROM Employees
 GROUP BY Role
 HAVING Role = "Engineer";
 
+-- CH12 - Order of execution of a Query
+
+-- Find the number of movies each director has directed
+SELECT *, COUNT(Title)
+FROM Movies
+GROUP BY Director;
+
+-- Find the total domestic and international sales that can be attributed to each director
+SELECT Director, sum(Domestic_sales + International_Sales) as Total_Sales
+FROM Movies
+LEFT JOIN Boxoffice ON Id = Movie_ID
+GROUP BY Director;
 
