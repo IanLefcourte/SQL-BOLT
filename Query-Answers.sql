@@ -250,3 +250,20 @@ VALUES (4, "Toy Story 4", "John Lasseter", 2017, 123);
 -- Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the  BoxOffice table. 
 INSERT INTO Boxoffice
 VALUES (4, 8.7, 340000000, 270000000);
+
+-- CH14 - Updating rows
+
+-- The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
+UPDATE Movies
+SET Director = "John Lasseter"
+WHERE Id = 2;
+
+-- The year that Toy Story 2 was released is incorrect, it was actually released in 1999
+UPDATE Movies
+SET Year = "1999"
+WHERE Id = 3;
+
+-- Both the title and directory for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by Lee Unkrich
+UPDATE Movies
+SET Title = "Toy Story 3", Director = "Lee Unkrich"
+WHERE Id = 11;
