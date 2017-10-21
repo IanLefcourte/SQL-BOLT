@@ -267,3 +267,13 @@ WHERE Id = 3;
 UPDATE Movies
 SET Title = "Toy Story 3", Director = "Lee Unkrich"
 WHERE Id = 11;
+
+-- CH15 - Deleting rows
+
+-- This database is getting too big, lets remove all movies that were released before 2005.
+DELETE FROM Movies
+WHERE Year < 2005;
+
+-- Andrew Stanton has also left the studio, so please remove all movies directed by him.
+DELETE FROM Movies
+WHERE Director = "Andrew Stanton";
