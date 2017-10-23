@@ -279,6 +279,7 @@ DELETE FROM Movies
 WHERE Director = "Andrew Stanton";
 
 -- CH16 - Creating Tables
+
 -- Create a new table named Database with the following columns:
 -- 1. Name A string (text) describing the name of the database
 -- 2. Version A number (floating point) of the latest version of this database
