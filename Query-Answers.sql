@@ -299,3 +299,11 @@ ALTER TABLE Movies
 -- Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English.
 ALTER TABLE Movies
   ADD COLUMN Language TEXT DEFAULT "English";
+
+-- CH18 - Dropping Tables
+
+-- We've sadly reached the end of our lessons, lets clean up by removing the Movies table
+DROP TABLE Movies;
+
+-- And drop the BoxOffice table as well
+DROP TABLE BoxOffice;
